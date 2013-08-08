@@ -1,0 +1,473 @@
+/*  
+Theme Name: Dropbox
+Theme URI: http://blog.dropbox.com
+Description: The Dropbox wordpress theme.
+Version: 0.1
+Author: Dropbox
+Author URI: http://blog.dropbox.com
+Tags: Dropbox
+*********************************************************************
+ATTENTION
+If you don't need any logo in your theme, please find #header element
+and remove last two lines from it's decoration 
+*********************************************************************
+
+************
+CSS CONTENTS
+************
+* --- reset
+* --- typography
+* --- text elements decoration
+* --- wordpress styles
+* --- layout
+* --- header
+* --- navigation
+* --- content
+* --- sidebar
+* --- search form
+* --- comments
+* --- footer
+* 
+* 
+*/
+
+/* Reset needed styles
+*******************************/
+html,body,div,span,form,h1,h2,h3,h4,p,blockquote{margin:0;padding:0;border:0;outline: 0;}
+:focus {outline: 0;}
+body {line-height: 1;}
+html {height: 100%;margin-bottom: 1px;}
+
+/* Typography
+*******************************/
+body {
+    font:normal 80% "Open Sans", Lucida Grande, Tahoma, Arial, Helvetica, sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    font:normal 1em/1 "Open Sans", Lucida Grande, Tahoma, Georgia, "Times New Roman", Times, serif;
+}
+pre,
+var,
+code { 
+    font-family:"Courier New", Courier, monospace; 
+}
+h3,
+#sidebar,
+.postdata,
+.entry-content {
+    font-family: "Open Sans", Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+    color: #444;
+}
+#header h2 {
+    font-family: "Open Sans", Lucida Grande, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+#rssh
+{
+    margin: -2px 0 0 0;
+    float:right;
+}
+
+.postdata { background:url(//www.dropbox.com/static/images/skinny_dots.gif) repeat-x bottom; border:0; }
+/* Header elements
+*******************************/
+h1 {
+    font-size:2.91em;
+}
+h2 {
+    font-size:13pt;
+    line-height:1.6;
+    color:#152942;
+}
+h3 {
+    font-size:1.55em;
+    color:#152942;
+}
+
+/* Text elements
+*******************************/
+ul,ol,p,dl {
+    line-height:1.8;
+}
+ul,ol         {margin: 0 0 1em .8em;}
+ul            {list-style-type:disc;}
+ol            {list-style-type:decimal;}
+p,dl	      {margin: 0 0 1em 0; text-align: left;}
+strong        {font-weight: bold; }
+em            {font-style: italic; }
+ins           {text-decoration:none;}
+del           {text-decoration:line-through;}
+img           {border:0;outline:0;}
+blockquote {
+    border-left: 2px solid #D2D6D8;
+	margin:0 0 0 1.6em;
+	padding: 0 0 0 1.6em;
+}
+a, a:visited{
+	color: #1F75CC;
+	text-decoration: none;
+	}
+	
+a:hover{
+	color: #1F75CC;
+	text-decoration: underline;
+	}
+}
+
+/* Wordpress styles
+*******************************/
+.aligncenter,
+div.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+.alignleft {
+   float: left;
+   margin:0 1em 1em 0;
+}
+.alignright {
+   float: right;
+   margin:0 0 1em 1em;
+}
+.wp-caption {
+   border: 1px solid #ccc;
+   text-align: center;
+   padding-top: 4px;
+}
+.wp-caption img {
+   margin: 0;
+   padding: 0;
+   border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+   font-size: 1em;
+   line-height:1.4;
+   padding: 0 4px 4px;
+   margin: 0;
+}
+
+/* Layout
+*******************************/
+body {
+	color: #363636;
+   /* background:url(images/bg2.gif) 0 0 repeat-x #fff; */
+}
+#root{
+	width:990px;
+	margin: 0px auto;
+}
+
+.clearfix:after {
+    content: ".";
+        display: block;
+	    clear: both;
+	        visibility: hidden;
+		    line-height: 0;
+		        height: 0;
+			}
+
+			.clearfix {
+			    display: inline-block;
+			    }
+
+			    html[xmlns] .clearfix {
+			        display: block;
+				}
+
+				* html .clearfix {
+				*     height: 1%;
+				*     }
+
+.button, .editor_ok_link
+{
+/*    background-color: #0078cc;
+ *        border-color: #80cbff #005c9c #005c9c #80cbff;*/
+    
+        background-color: #348dd3;
+	    border-color: #a3c8e9 #4379c0 #4379c0 #a3c8e9 !important;
+	        border-style: solid;
+		    border-width: 1px;
+		        color: #fff !important;
+			    margin: 0;
+			    }
+/* Header
+*******************************/
+#header {
+    height:68px;
+    margin-bottom:1px;
+    color:#fff;
+    padding:40px 0 0 0;
+    /*remove next two lines if you don't need logo in your blog*/
+}
+#header a {
+    color:#fff;
+    text-decoration:none;
+    margin-left: -10px;
+
+}
+#header h2 {
+    line-height:1.3;
+    font-size:1em;
+    color:#fff;
+}
+
+/* Navigation
+*******************************/
+#nav{
+    margin:0;
+    list-style:none;
+    background:#fff url(//www.dropbox.com/static/images/skinny_dots.gif) repeat-x bottom;
+    padding:0;
+}
+#nav li{
+    float:left;position: relative; list-style: none; float: left; margin: 0 1px;
+}
+#nav a{
+    line-height: 1em;
+    border: 0; display:block; position: relative;  margin: 0; color:#1f75cc; padding: 7px 15px 7px 15px;  height: 15px; font-size: 15px; float: left; z-index: 4001;
+}
+#nav a:hover
+{
+    text-decoration: none;
+   line-height: 1em;
+   color: #1f78cc; background-color: #f4faff; border: 1px solid #689dd5; padding: 6px 14px 6px 14px;
+}
+
+/* Content
+*******************************/
+#content {
+    width:680px;
+    margin:30px 50px 30px 0px;
+    float:left;
+}
+
+#content .post {
+    margin-bottom:3em;
+}
+#content .single {
+    border-bottom:0;
+}
+#content h2 a {
+    text-decoration:none;
+}
+#content h3 {
+    margin-bottom:20px;
+    line-height:2.1;
+    border-bottom:2px solid #D2D6D8;
+}
+.postdata {
+    padding:8px 0;
+    margin-bottom:8px;
+    color:#747474;
+}
+.postdata a {
+    color:#354a56;
+    text-decoration:none;
+}
+.postdata a:hover {
+    text-decoration:underline;
+}
+.tags {
+    line-height:1.2;
+    clear:both;
+}
+
+.cat_com { float: right; color: #747474}
+.cat_com a { color: #1F75CC; }
+
+/* Sidebar
+*******************************/
+#sidebar {
+    width:250px;
+    float:left;
+    margin: 46px 0 30px 0;
+    background: #f4faff;
+    border-top: 1px solid #ace;
+}
+#sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #222;
+    font-weight: normal;
+    padding:0 0;
+}
+#sidebar .box {
+    padding: 20px 30px;
+}
+#recentcomments,
+#sidebar #calendar_wrap,
+#sidebar .box .content,
+#sidebar #searchform,
+#sidebar .box li a,
+#sidebar .box .current-cat li a {
+    xborder-left:2px solid #D2D6D8;
+}
+#sidebar .box .tags,
+#sidebar #calendar_wrap,
+#sidebar .box li a,
+#sidebar #searchform {
+    padding:0;
+}
+#sidebar .box .tags {
+    line-height:1.6;
+}
+#sidebar .box li {
+    display:inline;/*for IE*/
+}
+#sidebar .box li a {
+    display:block;
+}
+#sidebar .box .icon {
+    padding-left: 5px;
+}
+#sidebar .box li li a {
+    padding-left:40px;
+}
+#sidebar .box li li li a {
+    padding-left:60px;
+}
+#sidebar .box li a:hover,
+#sidebar .box .current-cat li a:hover {
+    border-color:#1F75CC;
+}
+#sidebar .box .current-cat a,
+#sidebar .box .current-cat a:hover {
+    border-color:#1F75CC;
+}
+#sidebar ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+/*rss button*/
+#sidebar .rss {
+    height:59px;
+    margin-bottom:2px;
+}
+#sidebar .rss a {
+    float:right;
+    width:77px;
+    height:59px;
+    background:url(images/rss-icon2.gif) 0 0 no-repeat;
+    text-indent:-9999px;
+    display: none;
+}
+
+/*recent comments widget*/
+#sidebar #recentcomments {
+    padding-left:20px;
+}
+#sidebar  #recentcomments li.recentcomments {
+    display:block;
+}
+#recentcomments li.recentcomments a {
+    display:inline;
+    border:0;
+}
+
+/* Search Form
+*******************************/
+#searchform input {
+    width: 160px;
+    vertical-align:middle;
+    border:1px solid #ccc;
+    font-size:1em;
+    color:#222222;
+}
+#searchform input#search-submit {
+   width:30px;
+}
+
+/* Comments
+*******************************/
+#commentform {
+    margin-top:12px;
+}
+#commentform input.text,
+#commentform textarea {
+    border:1px solid #7E929E;
+    border-right-color:#E8E8E8;
+    border-bottom-color:#E8E8E8;
+    padding:2px;
+}
+#commentform input.text {
+    width:200px;
+}
+#commentform textarea {
+    width:400px;
+}
+#commentform input.submit {
+    border:1px solid #7E929E;
+    background:#E8E8E8;
+    color:#152942;
+}
+.comment {
+	margin: 0 0 20px 0;
+	padding: 20px;
+	background: #f9f9f9;
+	border-left: 2px solid #D2D6D8;
+}
+.comment .details img {
+    vertical-align:middle;
+}
+
+/* Footer
+*******************************/
+/*
+#footer {
+    clear:both;
+    padding:20px 0;
+    background:#f4faff;
+    border-top:1px solid #1F75CC;
+    line-height:1em;
+}
+#footer .copyright {
+    padding-right:8px;
+    width:900px;
+    margin:0 auto;
+    display:block;
+}
+#footer img {
+    vertical-align:middle;
+    margin-right:10px;
+}
+*/
+div#footer { min-height: 65px; _height: 65px; clear: both; margin: 5em auto 0 auto; width: 990px; }
+
+
+div#footer p#copyright { float: right; font-size: 11px; text-align: center; margin: 15px 7px; padding:0 0 3px 23px; background:transparent url(//www.dropbox.com/static/images/gray_logo.gif) no-repeat; color: #aaa;}
+
+.footer-col {
+	float: left;
+	max-width: 200px;
+	margin: 15px 60px 20px 0;
+}
+.footer-col ul {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+.footer-col ul li.header {
+	font-weight: 600;
+}
+.footer-col ul li a,.footer-col ul li.header {
+	font-size: 13px;
+	color: #767676;
+}
+
+.logo {
+  width: 990px;
+  height: 254px;
+}
+
+.addthis_button_facebook_like {
+  width: 85px;
+}
+.addthis_button_tweet {
+  width: 85px;
+}
+.addthis_button_google_plusone {
+  width: 76px;
+}

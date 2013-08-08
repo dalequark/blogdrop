@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BlogDrop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <script type="text/javascript" src="js/ejs_production.js"></script>
+  </head>
+  <body>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-fixed-top">
+        <div class="container">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">BlogDrop</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="blog-entry">
+            <script type="text/javascript" src="ejs_production.js"></script>
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-9">
+            <div class="page-header" style="border-bottom-color: #333">
+                  <h2>Blog Entry 1</h2>
+                  <p class="text-muted">August 7, 2013</p>
+            </div>
+            <p>Usu ea mollis virtute omnesque, nec eu quod nostrum, ferri ludus instructior id sed. Soleat graecis fastidii vix ei, augue audire mandamus usu ei. Error prodesset conclusionemque per id, invidunt recteque ea mel, soleat impetus vix cu. Te per nobis forensibus.
+
+            An decore discere pro, nemore vulputate constituto mea ex. Albucius interpretaris usu no, has et accumsan conceptam honestatis. Cu vide percipitur sadipscing mea, in vix nihil iudico scripserit. Sea timeam graecis mediocritatem ne. Dolor accommodare conclusionemque est ne, vis ne suas pericula. Zril invenire vim in.</p>
+            <ul>
+            <% for(var i=0; i<supplies.length; i++) {%>
+            <li><%= supplies[i] %></li>
+<% } %>
+</ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-entry">
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-9">
+            <div class="page-header" style="border-bottom-color: #333">
+                  <h2>Blog Entry 2</h2>
+                  <p class="text-muted">August 6, 2013</p>
+            </div>
+            <p>Mel stet cibo te, vel ut suas disputando. Ut saepe viderer aliquando sea, fuisset invenire an has, in dicunt expetendis per. His in quot mandamus dissentias, ea est dicat intellegat. Munere oblique reprimique nec ut. Tritani mentitum facilisi ei eum, solet consul te sed. Labore audire assentior sit at.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-entry">
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-9">
+            <div class="page-header" style="border-bottom-color: #333">
+                  <h2>Blog Entry 3</h2>
+                  <p class="text-muted">August 5, 2013</p>
+            </div>
+            <p>In vim iusto voluptua, ad sit clita oportere definiebas, cum meis malorum fabellas ei. Pro facer civibus ei, labores conceptam ne cum, usu an oporteat dissentias. Ius percipitur suscipiantur no. Ei adhuc soleat salutatus sea, probo graece ea eos. Erant reprimique repudiandae qui eu, te vel tation constituam.
+
+            Usu modus cetero posidonium in. Mea inermis necessitatibus in. Sit augue falli audiam cu, sed omnesque vituperatoribus in, aeterno legendos delicata et est. An dolorum urbanitas vel, corpora adipisci eu est. Ea iudicabit expetendis eam, dicant noster duo ea, et simul mucius lobortis sit. Has ea erant utinam ancillae, nec ad eripuit offendit pertinacia. Ei mei summo convenire, eu noluisse intellegam contentiones sea, vidisse ceteros atomorum pro ad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <center>  
+          <p class="text-muted credit">copyright stuff</p>
+        </center>
+      </div>
+    </div>
+
+  </body>
+</html>
